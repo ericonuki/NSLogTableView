@@ -24,17 +24,31 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (NSString *)valorDaLinha:(int)linha {
+- (NSString *)valorDoIndexPath:(NSIndexPath *)idx {
     NSArray *array = @[
             @"linha1",
             @"linha2",
             @"3",
             @"quatro"
     ];
-    return (NSString *)array[linha];
+    NSArray *array2 = @[
+            @"a",
+            @"b",
+            @"c",
+            @"d"
+    ];
+    if (idx.section == 0)
+        return (NSString *)array[idx.row];
+    if (idx.section == 1)
+        return (NSString *)array2[idx.row];
+    return @"";
 }
 
 - (NSString *)valorDaSection:(int)section {
+    if (section == 0)
+        return @"Linhas";
+    if (section == 1)
+        return @"abecedário";
     return @"SECTION NOT IMPLEMENTED";
 }
 

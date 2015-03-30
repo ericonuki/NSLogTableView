@@ -9,7 +9,7 @@
 
 @protocol NSLogTableViewDatasource <NSObject>
 
-- (NSString *)valorDaLinha:(int)linha;
+- (NSString *)valorDoIndexPath:(NSIndexPath *)idx;
 - (NSString *)valorDaSection:(int)section;
 - (int)numeroDeLinhasDaTabela:(NSLogTableView *)tabela;
 - (int)numeroDeSections:(NSLogTableView *)tabela;

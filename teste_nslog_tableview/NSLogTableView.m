@@ -7,6 +7,7 @@
 //
 
 #import "NSLogTableView.h"
+@import UIKit;
 
 @implementation NSLogTableView {
     int _numeroDeLinhas;
@@ -16,9 +17,15 @@
 - (void)print {
     _numeroDeLinhas = [_datasource numeroDeLinhasDaTabela:self];
     _numeroDeSections = [_datasource numeroDeSections:self];
-    for(int i = 0; i < _numeroDeLinhas; ++i) {
-        NSString *str = [_datasource valorDaLinha:i];
-        printf("%s\n", str.UTF8String);
+    for(int i = 0; i < _numeroDeSections; ++i) {
+        NSString *sectionName = [_datasource valorDaSection:i];
+        printf("-----Section: %s-----\n", sectionName.UTF8String);
+        for(int j = 0; j<_numeroDeLinhas; ++j) {
+            NSIndexPath *idx = [NSIndexPath indexPathForRow:j inSection:i];
+            NSString *str = [_datasource valorDoIndexPath:idx];
+            printf("%s\n", str.UTF8String);
+        }
+        printf("\n");
     }
 }
 
