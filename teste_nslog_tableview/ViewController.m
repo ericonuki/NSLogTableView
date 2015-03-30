@@ -24,7 +24,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
--(NSString *)valorDaLinha:(int)linha {
+- (NSString *)valorDaLinha:(int)linha {
     NSArray *array = @[
             @"linha1",
             @"linha2",
@@ -32,6 +32,10 @@
             @"quatro"
     ];
     return (NSString *)array[linha];
+}
+
+- (NSString *)valorDaSection:(int)section {
+    return @"SECTION NOT IMPLEMENTED";
 }
 
 - (int)numeroDeLinhasDaTabela:(NSLogTableView *)tabela {

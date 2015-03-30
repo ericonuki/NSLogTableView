@@ -10,10 +10,12 @@
 
 @implementation NSLogTableView {
     int _numeroDeLinhas;
+    int _numeroDeSections;
 }
 
 - (void)print {
     _numeroDeLinhas = [_datasource numeroDeLinhasDaTabela:self];
+    _numeroDeSections = [_datasource numeroDeSections:self];
     for(int i = 0; i < _numeroDeLinhas; ++i) {
         NSString *str = [_datasource valorDaLinha:i];
         printf("%s\n", str.UTF8String);
