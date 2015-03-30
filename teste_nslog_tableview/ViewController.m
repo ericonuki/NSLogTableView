@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "NSLogTableView.h"
+#import "NSLogTableViewDatasource.h"
 
-@interface ViewController ()
+@interface ViewController ()<NSLogTableViewDatasource>
 
 @end
 
@@ -18,14 +19,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSLogTableView *nsltbv = [[NSLogTableView alloc] init];
-    nsltbv.rows = @[
+    nsltbv.datasource = self;
+    nsltbv.numeroDeLinhas = 4;
+    [nsltbv print];
+    // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (NSArray *)dadosDaTabela {
+    return @[
             @"linha1",
             @"linha2",
             @"3",
             @"quatro"
     ];
-    [nsltbv print];
-    // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {

@@ -43,6 +43,7 @@
 		070975881AC97A6C0093E4AA /* teste_nslog_tableviewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = teste_nslog_tableviewTests.m; sourceTree = "<group>"; };
 		070975921AC9906B0093E4AA /* NSLogTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogTableView.h; sourceTree = "<group>"; };
 		070975931AC9906B0093E4AA /* NSLogTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSLogTableView.m; sourceTree = "<group>"; };
+		2FA28DDB95FEC1BF5851705D /* NSLogTableViewDatasource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSLogTableViewDatasource.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +95,7 @@
 				0709756C1AC97A6C0093E4AA /* Supporting Files */,
 				070975921AC9906B0093E4AA /* NSLogTableView.h */,
 				070975931AC9906B0093E4AA /* NSLogTableView.m */,
+				2FA28DDB95FEC1BF5851705D /* NSLogTableViewDatasource.h */,
 			);
 			path = teste_nslog_tableview;
 			sourceTree = "<group>";

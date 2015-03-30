@@ -11,7 +11,9 @@
 @implementation NSLogTableView
 
 - (void)print {
-    for(NSString* str in _rows) {
+    NSArray *dados = [_datasource dadosDaTabela];
+    for(int i = 0; i<_numeroDeLinhas; ++i) {
+        NSString *str = (NSString *)dados[i];
         printf("%s\n", str.UTF8String);
     }
 }

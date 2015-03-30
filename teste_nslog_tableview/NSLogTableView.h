@@ -7,10 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "NSLogTableViewDatasource.h"
 
 @interface NSLogTableView : NSObject
 
-@property NSArray *rows;
+@property int numeroDeLinhas;
+@property id<NSLogTableViewDatasource> datasource;
 
 - (void)print;
 
