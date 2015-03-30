@@ -20,18 +20,26 @@
     [super viewDidLoad];
     NSLogTableView *nsltbv = [[NSLogTableView alloc] init];
     nsltbv.datasource = self;
-    nsltbv.numeroDeLinhas = 4;
     [nsltbv print];
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (NSArray *)dadosDaTabela {
-    return @[
+-(NSString *)valorDaLinha:(int)linha {
+    NSArray *array = @[
             @"linha1",
             @"linha2",
             @"3",
             @"quatro"
     ];
+    return (NSString *)array[linha];
+}
+
+- (int)numeroDeLinhasDaTabela:(NSLogTableView *)tabela {
+    return 4;
+}
+
+- (int)numeroDeSections:(NSLogTableView *)tabela {
+    return 2;
 }
 
 - (void)didReceiveMemoryWarning {

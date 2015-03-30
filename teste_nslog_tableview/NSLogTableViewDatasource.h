@@ -5,8 +5,11 @@
 
 #import <Foundation/Foundation.h>
 
+@class NSLogTableView;
+
 @protocol NSLogTableViewDatasource <NSObject>
 
-- (NSArray *)dadosDaTabela;
+- (NSString *)valorDaLinha:(int)linha;
+- (int)numeroDeLinhasDaTabela:(NSLogTableView *)tabela;
 
 @end

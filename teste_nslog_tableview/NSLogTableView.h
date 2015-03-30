@@ -11,7 +11,6 @@
 
 @interface NSLogTableView : NSObject
 
-@property int numeroDeLinhas;
 @property id<NSLogTableViewDatasource> datasource;
 
 - (void)print;

@@ -8,12 +8,14 @@
 
 #import "NSLogTableView.h"
 
-@implementation NSLogTableView
+@implementation NSLogTableView {
+    int _numeroDeLinhas;
+}
 
 - (void)print {
-    NSArray *dados = [_datasource dadosDaTabela];
-    for(int i = 0; i<_numeroDeLinhas; ++i) {
-        NSString *str = (NSString *)dados[i];
+    _numeroDeLinhas = [_datasource numeroDeLinhasDaTabela:self];
+    for(int i = 0; i < _numeroDeLinhas; ++i) {
+        NSString *str = [_datasource valorDaLinha:i];
         printf("%s\n", str.UTF8String);
     }
 }
