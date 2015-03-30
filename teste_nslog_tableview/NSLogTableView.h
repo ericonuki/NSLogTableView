@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 #import "NSLogTableViewDatasource.h"
+#import "NSLogTableViewDelegate.h"
 
 @interface NSLogTableView : NSObject
 
 @property id<NSLogTableViewDatasource> datasource;
+@property id<NSLogTableViewDelegate> delegate;
 
 - (void)print;
 

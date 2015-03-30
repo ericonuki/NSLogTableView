@@ -6,4 +6,8 @@
 #import <Foundation/Foundation.h>
 
 @protocol NSLogTableViewDelegate <NSObject>
+
+-(void)vaiApresentarTabela;
+-(void)terminouDeApresentarTabela;
+
 @end

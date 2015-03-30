@@ -9,8 +9,9 @@
 #import "ViewController.h"
 #import "NSLogTableView.h"
 #import "NSLogTableViewDatasource.h"
+#import "NSLogTableViewDelegate.h"
 
-@interface ViewController ()<NSLogTableViewDatasource>
+@interface ViewController ()<NSLogTableViewDatasource, NSLogTableViewDelegate>
 
 @end
 
@@ -20,6 +21,7 @@
     [super viewDidLoad];
     NSLogTableView *nsltbv = [[NSLogTableView alloc] init];
     nsltbv.datasource = self;
+    nsltbv.delegate = self;
     [nsltbv print];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -64,6 +66,14 @@
 
 - (int)numeroDeSections:(NSLogTableView *)tabela {
     return 2;
+}
+
+- (void)vaiApresentarTabela {
+    printf("Vai Apresentar Tabela\n\n");
+}
+
+- (void)terminouDeApresentarTabela {
+    printf("Terminou de Apresentar Tabela\n");
 }
 
 - (void)didReceiveMemoryWarning {

@@ -15,6 +15,7 @@
 }
 
 - (void)print {
+    [_delegate vaiApresentarTabela];
     _numeroDeSections = [_datasource numeroDeSections:self];
     for(int i = 0; i < _numeroDeSections; ++i) {
         _numeroDeLinhas = [_datasource numeroDeLinhasDaTabela:self naSection:i];
@@ -27,6 +28,7 @@
         }
         printf("\n");
     }
+    [_delegate terminouDeApresentarTabela];
 }
 
 @end
