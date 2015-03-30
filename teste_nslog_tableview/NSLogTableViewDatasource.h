@@ -11,7 +11,7 @@
 
 - (NSString *)valorDoIndexPath:(NSIndexPath *)idx;
 - (NSString *)valorDaSection:(int)section;
-- (int)numeroDeLinhasDaTabela:(NSLogTableView *)tabela;
+- (int)numeroDeLinhasDaTabela:(NSLogTableView *)tabela naSection:(int)section;
 - (int)numeroDeSections:(NSLogTableView *)tabela;
 
 @end

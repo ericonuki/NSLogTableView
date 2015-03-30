@@ -35,7 +35,9 @@
             @"a",
             @"b",
             @"c",
-            @"d"
+            @"d",
+            @"e",
+            @"f"
     ];
     if (idx.section == 0)
         return (NSString *)array[idx.row];
@@ -52,8 +54,12 @@
     return @"SECTION NOT IMPLEMENTED";
 }
 
-- (int)numeroDeLinhasDaTabela:(NSLogTableView *)tabela {
-    return 4;
+- (int)numeroDeLinhasDaTabela:(NSLogTableView *)tabela naSection:(int)section {
+    if(section == 0)
+        return 4;
+    if(section == 1)
+        return 6;
+    return 0;
 }
 
 - (int)numeroDeSections:(NSLogTableView *)tabela {

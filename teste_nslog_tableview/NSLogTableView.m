@@ -15,9 +15,9 @@
 }
 
 - (void)print {
-    _numeroDeLinhas = [_datasource numeroDeLinhasDaTabela:self];
     _numeroDeSections = [_datasource numeroDeSections:self];
     for(int i = 0; i < _numeroDeSections; ++i) {
+        _numeroDeLinhas = [_datasource numeroDeLinhasDaTabela:self naSection:i];
         NSString *sectionName = [_datasource valorDaSection:i];
         printf("-----Section: %s-----\n", sectionName.UTF8String);
         for(int j = 0; j<_numeroDeLinhas; ++j) {
